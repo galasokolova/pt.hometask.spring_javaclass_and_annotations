@@ -9,14 +9,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Service
 public class UserService {
 
-    private Repo<User> userRepository;
+    private final Repo<User> userRepository;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(Repo<User> userRepository) {
         this.userRepository = userRepository;
     }
 

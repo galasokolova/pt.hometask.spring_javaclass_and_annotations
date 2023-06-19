@@ -1,6 +1,8 @@
 package org.javaclass_and_annotations.repository;
 
-public interface Repo<T> {
+import org.javaclass_and_annotations.entities.User;
 
-    T getById(Long id);
+public interface Repo<User> {
+
+    User getById(Long id);
 }
