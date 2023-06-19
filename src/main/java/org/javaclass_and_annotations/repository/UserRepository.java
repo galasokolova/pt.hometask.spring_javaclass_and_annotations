@@ -13,16 +13,16 @@ import java.util.Map;
 @Repository
 public class UserRepository implements Repo<User> {
 
-    private final Map<Long, User> userMap;
+    private Map<Long, User> userMap;
 
-    public UserRepository(Map<Long, User> userMap) {
-        this.userMap = userMap;
-    }
-
-    //    @Autowired
-//    public void setUserMap(Map<Long, User> userMap){
+//    public UserRepository(Map<Long, User> userMap) {
 //        this.userMap = userMap;
 //    }
+
+        @Autowired
+    public void setUserMap(Map<Long, User> userMap){
+        this.userMap = userMap;
+    }
 
 
     @Override
